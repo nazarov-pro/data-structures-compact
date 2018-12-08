@@ -1,6 +1,6 @@
 package org.shahin.nazarov.sorting;
 
-public interface Swapper {
+public interface SortingUtil {
 
     default void swap(int[] array, int i, int j) {
         if (i == j) {
@@ -10,6 +10,10 @@ public interface Swapper {
         int tmp = array[i];
         array[i] = array[j];
         array[j] = tmp;
+    }
+
+    default void shift(int[] array, int i, int step) {
+        array[i] = array[i + step];
     }
 
 }

@@ -1,6 +1,15 @@
-package org.shahin.nazarov.concurrency.eg1;
+package org.shahin.nazarov.concurrency;
 
-public class Traffic {
+import com.anarsoft.vmlens.concurrent.junit.ConcurrentTestRunner;
+import com.anarsoft.vmlens.concurrent.junit.ThreadCount;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.shahin.nazarov.concurrency.eg1.Area;
+import org.shahin.nazarov.concurrency.eg1.Car;
+import org.shahin.nazarov.concurrency.eg1.Go;
+import org.shahin.nazarov.concurrency.eg1.RoadBuilder;
+
+public class Example1 {
     public static void main(String[] args) {
         Area area = new Area();
 

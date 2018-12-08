@@ -23,7 +23,7 @@ public class Go implements Runnable {
                 if(car.go(area)){
                     System.out.println(car.getName() + " -> " + car.getPosition());
                 }else {
-                    System.out.println(car.getName() + " waiting -> " + car.getPosition());
+                    System.out.println(car.getName() + " waiting");
                 }
             }
         } catch (InterruptedException e) {

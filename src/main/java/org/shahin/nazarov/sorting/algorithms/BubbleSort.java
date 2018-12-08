@@ -1,6 +1,8 @@
-package org.shahin.nazarov.sorting;
+package org.shahin.nazarov.sorting.algorithms;
 
-public class BubbleSort implements Sortable, Swapper {
+import org.shahin.nazarov.sorting.Sortable;
+
+public class BubbleSort implements Sortable {
 
     @Override
     public void sort(int[] array) {
@@ -11,5 +13,10 @@ public class BubbleSort implements Sortable, Swapper {
                 }
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        return "BubbleSort";
     }
 }
