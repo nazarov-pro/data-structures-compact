@@ -1,2 +1,7 @@
 rootProject.name = 'training'
+include 'kafka-producer'
+include 'kafka-consumer'
+include 'caching'
+include 'http-server'
+include 'servers-manager'
 

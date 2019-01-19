@@ -1,5 +1,6 @@
 package org.shahin.nazarov.util;
 
+
 public class ArrayUtil extends RandomGenerator {
 
     public void print(int[] array){

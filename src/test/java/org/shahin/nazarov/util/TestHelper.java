@@ -1,5 +1,4 @@
 package org.shahin.nazarov.util;
-;
 
 public class TestHelper {
     private Timer timer = new Timer();

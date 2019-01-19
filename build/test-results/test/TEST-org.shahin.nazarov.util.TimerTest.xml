@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.shahin.nazarov.util.TimerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-01-04T14:38:44" hostname="Asus" time="1.006">
+  <properties/>
+  <testcase name="test" classname="org.shahin.nazarov.util.TimerTest" time="1.006"/>
+  <system-out><![CDATA[Timer started
+Timer stopped millis -1003 
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
