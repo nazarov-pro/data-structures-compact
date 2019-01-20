@@ -4,11 +4,6 @@ plugins {
 
 group 'org.shahin.nazarov'
 
-jar {
-    baseName = 'thirdServer'
-    version =  '0.0.1'
-}
-
 sourceCompatibility = 1.8
 
 repositories {
@@ -20,20 +15,22 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.16.20'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+def props = new Properties()
+file("src/main/resources/server.properties").withInputStream { props.load(it) }
+def id = props.getProperty('server.id', 'myServer')
 
 task fatJar(type: Jar) {
     manifest {
         attributes 'Main-Class': 'org.shahin.nazarov.FirstServer'
     }
-    baseName = jar.baseName
+    baseName = id
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
-
+    
     doLast {
         copy {
-            from project.libsDir.path + File.separator + (baseName + '.jar')
+            from (project.libsDir.path + File.separator + id + ".jar")
             into "C:\\Users\\s0552\\projects\\project_best\\training\\servers-manager\\libs"
         }
-
     }
 }

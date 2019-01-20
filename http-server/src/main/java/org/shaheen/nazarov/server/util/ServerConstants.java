@@ -1,9 +1,12 @@
 package org.shaheen.nazarov.server.util;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 public class ServerConstants {
 
     public static final String PATH_SERVER_PROPERTIES = "server.properties";
     public static final String PATH_HEALTH = "/health";
+    public static final String PATH_MANAGEMENT_HANDSHAKE = "/handshake";
     public static final String PATH_HEALTH_SHUTDOWN = "/health/shutdown";
 
     public static final String REQUEST_METHOD_GET = "GET";
@@ -11,12 +14,23 @@ public class ServerConstants {
     public static final String REQUEST_METHOD_PUT = "PUT";
     public static final String REQUEST_METHOD_DELETE = "DELETE";
 
+
+    public static final String HEADER_CONTENT_TYPE = "Content-Type";
+    public static final String HEADER_CONTENT_TYPE_JSON = "application/json";
+    public static final String HEADER_CONTENT_LENGTH = "Content-Length";
+    public static final String HEADER_CHARSET = "charset";
+    public static final String HEADER_CHARSET_UTF8 = "utf-8";
+
+
     public static final int RESPONSE_CODE_OK = 200;
     public static final int RESPONSE_CODE_NOT_FOUND = 404;
     public static final int RESPONSE_CODE_FORBIDDEN = 403;
 
     public static final String PROPERTY_KEY_NAME = "server.name";
     public static final String PROPERTY_DEFAULT_NAME = "MyServer";
+
+    public static final String PROPERTY_KEY_JAR_NAME = "server.id";
+    public static final String PROPERTY_DEFAULT_JAR_NAME = "myServer";
 
     public static final String PROPERTY_KEY_THREAD_POOL_SIZE = "server.threadPoolSize";
     public static final String PROPERTY_DEFAULT_THREAD_POOL_SIZE = "5";
@@ -57,8 +71,14 @@ public class ServerConstants {
     public static final String INFO_SERVER_STOPPED = "%s stopped on %s port.\n";
 
     public static final String STATUS_UP = "UP";
+    public static final String STATUS_OK = "OK";
+    public static final String STATUS_DOWN = "DOWN";
     public static final String STATUS_FAILED = "FAILED";
 
     public static final String FORBIDDEN_TEXT = "We are sorry but this page is secured %s.";
-    public static final String PAGE_NOT_FOUND_TEXT = "We are sorry but this page is secured %s.";
+    public static final String PAGE_NOT_FOUND_TEXT = "Page not found";
+
+    public static final ObjectMapper JSON = new ObjectMapper();
+    public static final ManagementHelper MANAGEMENT_NOTIFICATION_HELPER =
+            new ManagementHelper();
 }

@@ -9,7 +9,7 @@ public class ProcessStart {
 
     public String run(Path folder, String fileName, String additionalParams) throws IOException {
         ProcessBuilder pb = new ProcessBuilder(
-                "javaw",
+                "java",
                 "-jar",
                 additionalParams,
                 fileName);

@@ -13,7 +13,6 @@ import static org.shaheen.nazarov.server.util.ServerConstants.*;
 
 public class HealthHandler extends AbstractSecuredHandler {
 
-    public static ObjectMapper objectMapper = new ObjectMapper();
     private static HealthCheck healthCheck = new HealthCheck();
 
     @Override
@@ -35,7 +34,7 @@ public class HealthHandler extends AbstractSecuredHandler {
             healthCheck.setMaxThreads(server.getServerProperty().getThreadPoolSize());
             healthCheck.setHeapCurrent(formatSize(Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()));
             healthCheck.setHeapMax(formatSize(Runtime.getRuntime().maxMemory()));
-            response = objectMapper.writeValueAsString(healthCheck);
+            response = JSON.writeValueAsString(healthCheck);
         } else {
             printNotFound(httpExchange);
             return;

@@ -6,6 +6,6 @@ import lombok.Data;
 public class ServerStatus {
     private String name;
     private String port;
-    private String path;
+    private String host;
     private String status;
 }

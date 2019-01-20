@@ -6,9 +6,7 @@ import com.sun.net.httpserver.HttpServer;
 import lombok.Getter;
 import org.shaheen.nazarov.server.domain.ServerStatus;
 import org.shaheen.nazarov.server.handlers.HealthHandler;
-import org.shaheen.nazarov.server.util.ServerConstants;
-import org.shaheen.nazarov.server.util.ServerProperty;
-import org.shaheen.nazarov.server.util.ServerPropertySingleton;
+import org.shaheen.nazarov.server.util.*;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -18,8 +16,7 @@ import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
-import static org.shaheen.nazarov.server.util.ServerConstants.PATH_HEALTH;
-import static org.shaheen.nazarov.server.util.ServerConstants.STATUS_UP;
+import static org.shaheen.nazarov.server.util.ServerConstants.*;
 
 public class LightServer {
     private HttpServer httpServer;
@@ -53,13 +50,16 @@ public class LightServer {
         }
         startedTime = LocalDateTime.now();
         httpServer.start();
+        Runtime.getRuntime().addShutdownHook(new ShutdownHook());
+        if (serverProperty.getServerManagementEndpoint() != null)
+            MANAGEMENT_NOTIFICATION_HELPER.start();
         ServerStatus serverStatus = new ServerStatus();
         serverStatus.setName(serverProperty.getName());
         serverStatus.setPort(serverProperty.getPort());
-        serverStatus.setPath(httpServer.getAddress().getHostName() + ":" + serverStatus.getPort());
+        serverStatus.setHost(serverProperty.getHost());
         serverStatus.setStatus(STATUS_UP);
         try {
-            System.out.printf(HealthHandler.objectMapper.writeValueAsString(serverStatus) + "\n");
+            System.out.printf(JSON.writeValueAsString(serverStatus) + "\n");
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
@@ -126,6 +126,12 @@ public class LightServer {
         public Builder addHealth() {
             httpServer.createContext(PATH_HEALTH, new HealthHandler());
             contexts.add(PATH_HEALTH);
+            return this;
+        }
+
+        public Builder addServerManagement(String endpoint) {
+            serverProperty.setServerManagementEndpoint(endpoint.startsWith("http") ?
+                    endpoint : ("http://" + endpoint));
             return this;
         }
 

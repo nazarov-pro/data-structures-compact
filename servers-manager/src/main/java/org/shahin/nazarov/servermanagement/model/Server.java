@@ -8,9 +8,8 @@ import java.util.Objects;
 public class Server {
     private String label;
     private String fileName;
-    private int maxHeapMb;
     private boolean active;
-    private String path;
+    private String host;
     private String port;
 
     @Override

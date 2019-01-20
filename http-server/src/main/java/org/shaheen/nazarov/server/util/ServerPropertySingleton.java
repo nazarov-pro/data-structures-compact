@@ -9,6 +9,7 @@ import static org.shaheen.nazarov.server.util.ServerConstants.*;
 public class ServerPropertySingleton {
 
     public static ServerProperty serverProperty;
+    public ServerUtil serverUtil = new ServerUtil();
 
     public static ServerProperty getInstance() {
         if (serverProperty == null) {
@@ -30,12 +31,15 @@ public class ServerPropertySingleton {
 
             serverProperty.setName(properties.getProperty(PROPERTY_KEY_NAME, PROPERTY_DEFAULT_NAME));
 
+            serverProperty.setJarFileName(properties.getProperty(PROPERTY_KEY_JAR_NAME, PROPERTY_DEFAULT_JAR_NAME) + ".jar");
+
             serverProperty.setThreadPoolSize(properties.getProperty(PROPERTY_KEY_THREAD_POOL_SIZE,
                     PROPERTY_DEFAULT_THREAD_POOL_SIZE));
 
             serverProperty.setPort(properties.getProperty(PROPERTY_KEY_PORT,
                     PROPERTY_DEFAULT_PORT));
 
+            serverProperty.setHost(serverUtil.getIpAddress());
             serverProperty.setAuth(properties.getProperty(PROPERTY_KEY_AUTH, PROPERTY_DEFAULT_AUTH));
 
             switch (serverProperty.getAuth()) {
