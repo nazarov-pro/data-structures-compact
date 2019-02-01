@@ -4,4 +4,6 @@ include 'kafka-consumer'
 include 'caching'
 include 'http-server'
 include 'servers-manager'
+include 'rabbitmq'
+include 'db-tunning'
 
