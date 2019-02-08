@@ -4,5 +4,23 @@
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="caching_main" target="1.8" />
+      <module name="caching_test" target="1.8" />
+      <module name="crypto_main" target="1.8" />
+      <module name="crypto_test" target="1.8" />
+      <module name="db-tunning_main" target="1.8" />
+      <module name="db-tunning_test" target="1.8" />
+      <module name="kafka-consumer_main" target="1.8" />
+      <module name="kafka-consumer_test" target="1.8" />
+      <module name="kafka-producer_main" target="1.8" />
+      <module name="kafka-producer_test" target="1.8" />
+      <module name="liquibase_main" target="1.8" />
+      <module name="liquibase_test" target="1.8" />
+      <module name="logger_main" target="1.8" />
+      <module name="logger_test" target="1.8" />
+      <module name="rabbitmq_main" target="1.8" />
+      <module name="rabbitmq_test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

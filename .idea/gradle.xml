@@ -6,14 +6,23 @@
         <option name="createEmptyContentRootDirectories" value="true" />
         <option name="distributionType" value="WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="1.8" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/caching" />
+            <option value="$PROJECT_DIR$/db" />
+            <option value="$PROJECT_DIR$/db/db-tunning" />
+            <option value="$PROJECT_DIR$/db/liquibase" />
+            <option value="$PROJECT_DIR$/edd" />
+            <option value="$PROJECT_DIR$/edd/kafka-consumer" />
+            <option value="$PROJECT_DIR$/edd/kafka-producer" />
+            <option value="$PROJECT_DIR$/edd/rabbitmq" />
             <option value="$PROJECT_DIR$/http-server" />
-            <option value="$PROJECT_DIR$/kafka-consumer" />
-            <option value="$PROJECT_DIR$/kafka-producer" />
             <option value="$PROJECT_DIR$/servers-manager" />
+            <option value="$PROJECT_DIR$/utility" />
+            <option value="$PROJECT_DIR$/utility/caching" />
+            <option value="$PROJECT_DIR$/utility/crypto" />
+            <option value="$PROJECT_DIR$/utility/logger" />
           </set>
         </option>
       </GradleProjectSettings>

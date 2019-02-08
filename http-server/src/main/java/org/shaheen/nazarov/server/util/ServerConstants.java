@@ -41,7 +41,7 @@ public class ServerConstants {
     public static final String PROPERTY_KEY_AUTH = "server.auth";
     public static final String PROPERTY_DEFAULT_AUTH_NONE = "none";
     public static final String PROPERTY_DEFAULT_AUTH_BASIC = "basic";
-    public static final String PROPERTY_DEFAULT_AUTH_TOKEN = "token";
+    public static final String PROPERTY_DEFAULT_API_KEY = "api-key";
     public static final String PROPERTY_DEFAULT_AUTH_CERIFICATE = "certificate";
     public static final String PROPERTY_DEFAULT_AUTH = PROPERTY_DEFAULT_AUTH_NONE;
 
@@ -50,12 +50,13 @@ public class ServerConstants {
     public static final String PROPERTY_KEY_AUTH_USERNAME = "server.auth.username";
     public static final String PROPERTY_KEY_AUTH_PASSWORD = "server.auth.password";
 
-    public static final String PROPERTY_KEY_AUTH_TOKEN = "server.auth.token";
+    public static final String PROPERTY_KEY_AUTH_API_KEY = "server.api.key";
 
     public static final String PROPERTY_KEY_AUTH_PUBLIC_CERTIFICATE = "server.auth.cert";
 
 
     public static final String HEADER_KEY_AUTHORIZATION = "Authorization";
+    public static final String HEADER_KEY_API_KEY = "X-Api";
 
     public static final String AUTH_BASIC_PREFIX = "Basic ";
     public static final String AUTH_TOKEN_PREFIX = "Token ";

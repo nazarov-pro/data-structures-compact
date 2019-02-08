@@ -1,0 +1,73 @@
+version : '3.2'
+services:
+  database:
+    container_name: database
+    image: postgres:9.5
+    volumes:
+      - database:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=digitalid
+      - POSTGRES_USER=digitalid
+      - POSTGRES_PASSWORD=digitalid
+      - PGDATA=/var/lib/postgresql/data/pgdata
+
+  paygo-mobile-api:
+    container_name: paygo-mobile-api
+    build:
+      context: ./
+      dockerfile: mobile.dockerfile
+    ports:
+      - "1111:1111"
+    links:
+      - database:database
+    depends_on:
+      - database
+    environment:
+      DATABASE_HOST: database
+      DATABASE_USER: digitalid
+      DATABASE_PASSWORD: digitalid
+      DATABASE_NAME: digitalid
+      DATABASE_PORT: 5432
+
+  paygo-sp-api:
+    container_name: paygo-sp-api
+    build:
+      context: ./
+      dockerfile: sp.dockerfile
+    ports:
+      - "1112:1112"
+    links:
+      - database:database
+    depends_on:
+      - database
+      - paygo-mobile-api
+    environment:
+      DATABASE_HOST: database
+      DATABASE_USER: digitalid
+      DATABASE_PASSWORD: digitalid
+      DATABASE_NAME: digitalid
+      DATABASE_PORT: 5432
+
+  paygo-admin-api:
+    container_name: paygo-admin-api
+    build:
+      context: ./
+      dockerfile: admin.dockerfile
+    ports:
+      - "1113:1113"
+    links:
+      - database:database
+      - paygo-mobile-api
+      - paygo-sp-api
+    depends_on:
+      - database
+    environment:
+      DATABASE_HOST: database
+      DATABASE_USER: digitalid
+      DATABASE_PASSWORD: digitalid
+      DATABASE_NAME: digitalid
+      DATABASE_PORT: 5432
+volumes:
+    database: {}

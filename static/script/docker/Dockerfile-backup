@@ -1,0 +1,19 @@
+FROM gradle:4.4.1-jdk8
+WORKDIR /parking
+COPY build.gradle .
+COPY settings.gradle .
+COPY src ./src/
+COPY common-client ./common-client/
+COPY common-db ./common-db/
+COPY common-util ./common-util/
+COPY admin ./admin/
+COPY mobile ./mobile/
+COPY service-provider ./service-provider/
+COPY libs ./libs/
+USER root
+CMD gradle mobile:build --console plain \
+    && java -Djava.security.egd=file:/dev/./urandom -Dspring.profiles.active=container -jar mobile/build/libs/mobile-1.0.0.jar
+CMD gradle admin:build --console plain \
+    && java -Djava.security.egd=file:/dev/./urandom -Dspring.profiles.active=container -jar mobile/build/libs/admin-1.0.0.jar
+CMD gradle service-provider:build --console plain \
+    && java -Djava.security.egd=file:/dev/./urandom -Dspring.profiles.active=container -jar mobile/build/libs/service-provider-1.0.0.jar
