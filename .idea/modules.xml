@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/server-ui/server-ui.iml" filepath="$PROJECT_DIR$/server-ui/server-ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservices/server-ui/server-ui.iml" filepath="$PROJECT_DIR$/microservices/server-ui/server-ui.iml" />
     </modules>
   </component>
 </project>

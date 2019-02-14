@@ -1,0 +1,29 @@
+version: '3'
+services:
+#  MEMCACHED
+  caching:
+    container_name: caching_api
+    image: memcached
+    ports:
+      - "11211:11211"
+    environment:
+    # Memcached memory limit in megabytes
+      - MEMCACHED_MEMORY_LIMIT=256
+    networks:
+      - api
+    hostname: caching
+#  MEMCACHED
+
+  nginx:
+    container_name: nginx
+    image: nginx:1.15
+    ports:
+    - "80:80"
+    volumes:
+    - ./conf:/etc/nginx
+    restart: always
+    networks:
+      - api
+
+networks:
+  api:
