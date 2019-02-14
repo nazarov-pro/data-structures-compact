@@ -5,12 +5,13 @@
       <GradleProjectSettings>
         <option name="distributionType" value="WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="1.8" />
+        <option name="gradleJvm" value="1.8.0_151" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/db" />
             <option value="$PROJECT_DIR$/db/db-tunning" />
+            <option value="$PROJECT_DIR$/db/jdbi" />
             <option value="$PROJECT_DIR$/db/liquibase" />
             <option value="$PROJECT_DIR$/db/mybatis" />
             <option value="$PROJECT_DIR$/edd" />

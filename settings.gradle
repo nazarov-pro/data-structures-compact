@@ -12,4 +12,6 @@ include 'db:mybatis'
 include 'microservices:http-server'
 include 'microservices:servers-manager'
 include 'microservices:jetty-embedded'
+include 'db:jdbi'
+findProject(':db:jdbi')?.name = 'jdbi'
 

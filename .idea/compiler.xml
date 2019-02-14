@@ -49,6 +49,8 @@
       <module name="org.shahin.nazarov-rabbitmq_test" target="1.8" />
       <module name="org.shahin.nazarov-servers-manager_main" target="1.8" />
       <module name="org.shahin.nazarov-servers-manager_test" target="1.8" />
+      <module name="org.shahin.nazarov-training_main" target="1.8" />
+      <module name="org.shahin.nazarov-training_test" target="1.8" />
       <module name="rabbitmq_main" target="1.8" />
       <module name="rabbitmq_test" target="1.8" />
       <module name="servers-manager_main" target="1.8" />
