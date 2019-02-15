@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.code.simple-spring-memcached:simple-spring-memcached:3.1.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.simple-spring-memcached/simple-spring-memcached/3.1.0/ca7133251b72d053f58696181e95efa23e80a1dd/simple-spring-memcached-3.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.simple-spring-memcached/simple-spring-memcached/3.1.0/77c67ea9ea512ed1da2a6fa81eb24abc0363005/simple-spring-memcached-3.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

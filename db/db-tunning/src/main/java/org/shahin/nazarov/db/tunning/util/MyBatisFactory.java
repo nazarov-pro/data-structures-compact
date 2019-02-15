@@ -27,7 +27,7 @@ public class MyBatisFactory {
         Environment environment  = new Environment("developpment", transactionFactory, dataSource);
 
         Configuration configuration = new Configuration(environment);
-        configuration.addMappers("org.shahin.nazarov.db.mybatis.mapper");
+        configuration.addMappers("org.shahin.nazarov.db.mybatis.dao");
 
         sqlSessionFactory =
                 new SqlSessionFactoryBuilder().build(configuration);

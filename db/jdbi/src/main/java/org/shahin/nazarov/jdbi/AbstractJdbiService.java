@@ -5,15 +5,16 @@ import org.jdbi.v3.core.Jdbi;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.util.Collection;
+import java.util.Optional;
 
 public abstract class AbstractJdbiService<M, K extends Serializable> implements JdbiService<M, K> {
 
-    protected Class<? extends JdbiMapper<M, K>> mapperClass;
+    protected final Class<? extends JdbiDao<M, K>> mapperClass;
     protected final Jdbi jdbi;
-    protected Class<M> mClass;
-    protected Class<K> kClass;
+    protected final Class<M> mClass;
+    protected final Class<K> kClass;
 
-    public AbstractJdbiService(Class<? extends JdbiMapper<M,K>> mapperClass) {
+    public AbstractJdbiService(Class<? extends JdbiDao<M,K>> mapperClass) {
         this.mapperClass = mapperClass;
         this.jdbi = JdbiConfig.getInstance().getJdbi();
         this.mClass = (Class<M>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
@@ -40,6 +41,21 @@ public abstract class AbstractJdbiService<M, K extends Serializable> implements 
     }
 
     @Override
+    public void insert(Collection<M> models) {
+        jdbi.useExtension(mapperClass, mapper -> mapper.insert(models));
+    }
+
+    @Override
+    public void update(Collection<M> models, Collection<K> keys) {
+        jdbi.useExtension(mapperClass, mapper -> mapper.update(models, keys));
+    }
+
+    @Override
+    public void remove(Collection<K> keys) {
+        jdbi.useExtension(mapperClass, mapper -> mapper.remove(keys));
+    }
+
+    @Override
     public M get(K key, Class<M> mClass) {
         return jdbi.withExtension(mapperClass, mapper -> mapper.get(key, mClass));
     }
@@ -57,5 +73,15 @@ public abstract class AbstractJdbiService<M, K extends Serializable> implements 
     @Override
     public Collection<M> list() {
         return list(mClass);
+    }
+
+    @Override
+    public long size() {
+        return jdbi.withExtension(mapperClass, mapper -> mapper.size());
+    }
+
+    @Override
+    public Optional<M> getSafe(K key) {
+        return Optional.ofNullable(get(key));
     }
 }
