@@ -2,6 +2,10 @@ plugins {
     id 'java'
 }
 
+ext {
+    jerseyVersion = '2.6'
+    jettyVersion = '9.4.14.v20181114'
+}
 group 'org.shahin.nazarov'
 version '1.0.0'
 
@@ -12,7 +16,11 @@ repositories {
 }
 
 dependencies {
-    compile 'org.eclipse.jetty:jetty-server:9.4.14.v20181114'
-    compile 'org.eclipse.jetty:jetty-servlet:9.4.14.v20181114'
+    compile "org.eclipse.jetty:jetty-server:${jettyVersion}"
+    compile "org.eclipse.jetty:jetty-servlet:${jettyVersion}"
+    compile "org.glassfish.jersey.core:jersey-server:${jerseyVersion}"
+    compile "org.glassfish.jersey.containers:jersey-container-servlet-core:${jerseyVersion}"
+    compile "org.glassfish.jersey.containers:jersey-container-jetty-http:${jerseyVersion}"
+    compile "org.glassfish.jersey.media:jersey-media-json-jackson:${jerseyVersion}"
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }

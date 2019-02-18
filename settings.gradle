@@ -14,4 +14,8 @@ include 'microservices:servers-manager'
 include 'microservices:jetty-embedded'
 include 'db:jdbi'
 findProject(':db:jdbi')?.name = 'jdbi'
+include 'microservices:jersey-rest'
+findProject(':microservices:jersey-rest')?.name = 'jersey-rest'
+include 'utility:util'
+findProject(':utility:util')?.name = 'util'
 

@@ -1,8 +1,9 @@
 package org.shahin.nazarov.jdbi;
 
+import java.io.Serializable;
 import java.util.Collection;
 
-public interface JdbiDao<M, K> extends DaoHelper {
+public interface JdbiDao<M extends Serializable, K extends Serializable> extends DaoHelper {
     void createTable();
     void insert(M model);
     void insert(Collection<M> models);

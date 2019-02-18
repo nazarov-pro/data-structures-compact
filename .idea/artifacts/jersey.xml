@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="jersey">
+    <output-path>$PROJECT_DIR$/out/artifacts/jersey</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="org.shahin.nazarov.jersey-rest/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="org.shahin.nazarov.jersey-rest" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

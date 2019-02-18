@@ -20,6 +20,7 @@
             <option value="$PROJECT_DIR$/edd/rabbitmq" />
             <option value="$PROJECT_DIR$/microservices" />
             <option value="$PROJECT_DIR$/microservices/http-server" />
+            <option value="$PROJECT_DIR$/microservices/jersey-rest" />
             <option value="$PROJECT_DIR$/microservices/jetty-embedded" />
             <option value="$PROJECT_DIR$/microservices/servers-manager" />
             <option value="$PROJECT_DIR$/utility" />
@@ -27,6 +28,7 @@
             <option value="$PROJECT_DIR$/utility/crypto" />
             <option value="$PROJECT_DIR$/utility/elastic-search" />
             <option value="$PROJECT_DIR$/utility/logger" />
+            <option value="$PROJECT_DIR$/utility/util" />
           </set>
         </option>
         <option name="useQualifiedModuleNames" value="true" />

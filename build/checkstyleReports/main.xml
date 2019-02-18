@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.17">
+<file name="C:\Users\s0552\projects\project_best\training\src\main\resources\server.properties">
+<error line="1" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\s0552\projects\project_best\training\src\main\java\org\shahin\nazarov\FirstServer.java">
+<error line="7" column="1" severity="error" message="Utility classes should not have a public or default constructor." source="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck"/>
+<error line="8" column="29" severity="error" message="Parameter args should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+</file>
+<file name="C:\Users\s0552\projects\project_best\training\src\main\java\org\shahin\nazarov\sorting\Sortable.java">
+</file>
+<file name="C:\Users\s0552\projects\project_best\training\src\main\java\org\shahin\nazarov\sorting\Sortable2D.java">
+</file>
+<file name="C:\Users\s0552\projects\project_best\training\src\main\java\org\shahin\nazarov\sorting\SortingUtil.java">
+</file>
+<file name="C:\Users\s0552\projects\project_best\training\src\main\java\org\shahin\nazarov\sorting\algorithms\BubbleSort.java">
+<error line="7" column="5" severity="error" message="Class &apos;BubbleSort&apos; looks like designed for extension (can be subclassed), but the method &apos;sort&apos; does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class &apos;BubbleSort&apos; final or making the method &apos;sort&apos; static/final/abstract/empty, or adding allowed annotation for the method." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="8" column="22" severity="error" message="Parameter array should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="18" column="5" severity="error" message="Class &apos;BubbleSort&apos; looks like designed for extension (can be subclassed), but the method &apos;toString&apos; does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class &apos;BubbleSort&apos; final or making the method &apos;toString&apos; static/final/abstract/empty, or adding allowed annotation for the method." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="C:\Users\s0552\projects\project_best\training\src\main\java\org\shahin\nazarov\sorting\algorithms\CountingSort.java">
+<error line="8" column="22" severity="error" message="Parameter array should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+</file>
+<file name="C:\Users\s0552\projects\project_best\training\src\main\java\org\shahin\nazarov\sorting\algorithms\InsertionSort.java">
+<error line="7" column="5" severity="error" message="Class &apos;InsertionSort&apos; looks like designed for extension (can be subclassed), but the method &apos;sort&apos; does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class &apos;InsertionSort&apos; final or making the method &apos;sort&apos; static/final/abstract/empty, or adding allowed annotation for the method." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="8" column="22" severity="error" message="Parameter array should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="20" column="5" severity="error" message="Class &apos;InsertionSort&apos; looks like designed for extension (can be subclassed), but the method &apos;toString&apos; does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class &apos;InsertionSort&apos; final or making the method &apos;toString&apos; static/final/abstract/empty, or adding allowed annotation for the method." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="C:\Users\s0552\projects\project_best\training\src\main\java\org\shahin\nazarov\sorting\algorithms\MergeSort.java">
+<error line="7" column="5" severity="error" message="Class &apos;MergeSort&apos; looks like designed for extension (can be subclassed), but the method &apos;sort&apos; does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class &apos;MergeSort&apos; final or making the method &apos;sort&apos; static/final/abstract/empty, or adding allowed annotation for the method." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="8" column="22" severity="error" message="Parameter array should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="12" column="5" severity="error" message="Class &apos;MergeSort&apos; looks like designed for extension (can be subclassed), but the method &apos;sort&apos; does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class &apos;MergeSort&apos; final or making the method &apos;sort&apos; static/final/abstract/empty, or adding allowed annotation for the method." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="12" column="22" severity="error" message="Parameter input should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="12" column="35" severity="error" message="Parameter start should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="12" column="46" severity="error" message="Parameter end should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="24" column="5" severity="error" message="Class &apos;MergeSort&apos; looks like designed for extension (can be subclassed), but the method &apos;merge&apos; does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class &apos;MergeSort&apos; final or making the method &apos;merge&apos; static/final/abstract/empty, or adding allowed annotation for the method." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="24" column="23" severity="error" message="Parameter input should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="24" column="36" severity="error" message="Parameter start should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="24" column="47" severity="error" message="Parameter mid should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="24" column="56" severity="error" message="Parameter end should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="43" column="5" severity="error" message="Class &apos;MergeSort&apos; looks like designed for extension (can be subclassed), but the method &apos;toString&apos; does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class &apos;MergeSort&apos; final or making the method &apos;toString&apos; static/final/abstract/empty, or adding allowed annotation for the method." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="C:\Users\s0552\projects\project_best\training\src\main\java\org\shahin\nazarov\sorting\algorithms\QuickSort.java">
+<error line="7" column="22" severity="error" message="Parameter array should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+</file>
+<file name="C:\Users\s0552\projects\project_best\training\src\main\java\org\shahin\nazarov\sorting\algorithms\RadixSort.java">
+<error line="7" column="22" severity="error" message="Parameter array should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+</file>
+<file name="C:\Users\s0552\projects\project_best\training\src\main\java\org\shahin\nazarov\sorting\algorithms\SelectionSort.java">
+<error line="7" column="5" severity="error" message="Class &apos;SelectionSort&apos; looks like designed for extension (can be subclassed), but the method &apos;sort&apos; does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class &apos;SelectionSort&apos; final or making the method &apos;sort&apos; static/final/abstract/empty, or adding allowed annotation for the method." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="8" column="22" severity="error" message="Parameter array should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="12" column="13" severity="error" message="&apos;for&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="12" column="40" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="13" column="17" severity="error" message="&apos;if&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="13" column="47" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="21" column="5" severity="error" message="Class &apos;SelectionSort&apos; looks like designed for extension (can be subclassed), but the method &apos;toString&apos; does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class &apos;SelectionSort&apos; final or making the method &apos;toString&apos; static/final/abstract/empty, or adding allowed annotation for the method." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="C:\Users\s0552\projects\project_best\training\src\main\java\org\shahin\nazarov\sorting\algorithms\ShellSort.java">
+<error line="12" column="22" severity="error" message="Parameter algorithm should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="12" column="29" severity="error" message="&apos;algorithm&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+<error line="16" column="5" severity="error" message="Class &apos;ShellSort&apos; looks like designed for extension (can be subclassed), but the method &apos;sort&apos; does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class &apos;ShellSort&apos; final or making the method &apos;sort&apos; static/final/abstract/empty, or adding allowed annotation for the method." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="17" column="22" severity="error" message="Parameter array should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="30" column="36" severity="error" message="Parameter array should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="45" column="33" severity="error" message="Parameter array should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="57" column="5" severity="error" message="Class &apos;ShellSort&apos; looks like designed for extension (can be subclassed), but the method &apos;toString&apos; does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class &apos;ShellSort&apos; final or making the method &apos;toString&apos; static/final/abstract/empty, or adding allowed annotation for the method." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="C:\Users\s0552\projects\project_best\training\src\main\java\org\shahin\nazarov\util\ArrayUtil.java">
+<error line="6" column="5" severity="error" message="Class &apos;ArrayUtil&apos; looks like designed for extension (can be subclassed), but the method &apos;print&apos; does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class &apos;ArrayUtil&apos; final or making the method &apos;print&apos; static/final/abstract/empty, or adding allowed annotation for the method." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="6" column="23" severity="error" message="Parameter array should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="6" column="35" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="8" column="9" severity="error" message="&apos;for&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="8" column="25" severity="error" message="&apos;&lt;&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="8" column="45" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+</file>
+<file name="C:\Users\s0552\projects\project_best\training\src\main\java\org\shahin\nazarov\util\RandomGenerator.java">
+<error line="5" column="5" severity="error" message="Class &apos;RandomGenerator&apos; looks like designed for extension (can be subclassed), but the method &apos;generateIntArray&apos; does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class &apos;RandomGenerator&apos; final or making the method &apos;generateIntArray&apos; static/final/abstract/empty, or adding allowed annotation for the method." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="6" column="33" severity="error" message="&apos;10&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="6" column="37" severity="error" message="&apos;100&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="9" column="5" severity="error" message="Class &apos;RandomGenerator&apos; looks like designed for extension (can be subclassed), but the method &apos;generateIntArray&apos; does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class &apos;RandomGenerator&apos; final or making the method &apos;generateIntArray&apos; static/final/abstract/empty, or adding allowed annotation for the method." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="9" column="35" severity="error" message="Parameter size should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="10" column="39" severity="error" message="&apos;100&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="13" column="5" severity="error" message="Class &apos;RandomGenerator&apos; looks like designed for extension (can be subclassed), but the method &apos;generateIntArray&apos; does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class &apos;RandomGenerator&apos; final or making the method &apos;generateIntArray&apos; static/final/abstract/empty, or adding allowed annotation for the method." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="13" column="35" severity="error" message="Parameter size should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="13" column="45" severity="error" message="Parameter max should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+</file>
+<file name="C:\Users\s0552\projects\project_best\training\src\main\java\org\shahin\nazarov\util\Timer.java">
+<error line="7" column="5" severity="error" message="Class &apos;Timer&apos; looks like designed for extension (can be subclassed), but the method &apos;start&apos; does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class &apos;Timer&apos; final or making the method &apos;start&apos; static/final/abstract/empty, or adding allowed annotation for the method." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="12" column="5" severity="error" message="Class &apos;Timer&apos; looks like designed for extension (can be subclassed), but the method &apos;stop&apos; does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class &apos;Timer&apos; final or making the method &apos;stop&apos; static/final/abstract/empty, or adding allowed annotation for the method." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+</checkstyle>

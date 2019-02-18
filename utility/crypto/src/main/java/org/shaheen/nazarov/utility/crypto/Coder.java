@@ -13,7 +13,7 @@ public class Coder {
     public String generateSecretKey(PrivateKey privateKey, PublicKey publicKey)
             throws NoSuchAlgorithmException, InvalidKeyException {
         // Alice creates and initializes her DH KeyAgreement object
-        KeyAgreement agreement = KeyAgreement.getInstance(Constants.Crypt.AGREEMENT_ALGORITHM);
+        KeyAgreement agreement = KeyAgreement.getInstance(Constants.Crypt.ECDH_ALGORITHM);
         agreement.init(privateKey);
         agreement.doPhase(publicKey, true);
         byte[] sharedSecret = agreement.generateSecret();
@@ -24,7 +24,7 @@ public class Coder {
     public PrivateKey loadPrivateKey(String key64) throws GeneralSecurityException {
         byte[] clear = Base64.decode(key64);
         PKCS8EncodedKeySpec keySpec = new PKCS8EncodedKeySpec(clear);
-        KeyFactory fact = KeyFactory.getInstance(Constants.Crypt.ALGORITHM);
+        KeyFactory fact = KeyFactory.getInstance(Constants.Crypt.EC_ALGORITHM);
         PrivateKey priv = fact.generatePrivate(keySpec);
         Arrays.fill(clear, (byte) 0);
         return priv;
@@ -33,7 +33,7 @@ public class Coder {
     public PublicKey loadPublicKey(String stored) throws GeneralSecurityException {
         byte[] data = Base64.decode(stored);
         X509EncodedKeySpec spec = new X509EncodedKeySpec(data);
-        KeyFactory fact = KeyFactory.getInstance(Constants.Crypt.ALGORITHM);
+        KeyFactory fact = KeyFactory.getInstance(Constants.Crypt.EC_ALGORITHM);
         return fact.generatePublic(spec);
     }
 

@@ -1,7 +1,9 @@
 package org.shahin.nazarov.jdbi.dao;
 
 import org.jdbi.v3.sqlobject.config.RegisterBeanMapper;
-import org.jdbi.v3.sqlobject.customizer.*;
+import org.jdbi.v3.sqlobject.customizer.Bind;
+import org.jdbi.v3.sqlobject.customizer.BindBean;
+import org.jdbi.v3.sqlobject.customizer.MaxRows;
 import org.jdbi.v3.sqlobject.statement.MapTo;
 import org.jdbi.v3.sqlobject.statement.SqlBatch;
 import org.jdbi.v3.sqlobject.statement.SqlQuery;
@@ -14,9 +16,11 @@ import java.util.Collection;
 public interface UserDao extends JdbiDao<User, Integer> {
 
     String TABLE_NAME = "\"USER\"";
+    int MAX_ELEMENTS = 5;
 
     @Override
-    @SqlUpdate("CREATE TABLE IF NOT EXISTS " + TABLE_NAME + " (id INTEGER PRIMARY KEY, username VARCHAR(50), password VARCHAR(50))")
+    @SqlUpdate("CREATE TABLE IF NOT EXISTS " + TABLE_NAME
+            + " (id INTEGER PRIMARY KEY, username VARCHAR(50), password VARCHAR(50))")
     void createTable();
 
     @Override
@@ -49,12 +53,12 @@ public interface UserDao extends JdbiDao<User, Integer> {
     User get(@Bind("id") Integer key, @MapTo Class<User> mClass);
 
     @Override
-    @SqlQuery("SELECT * FROM " + TABLE_NAME )
+    @SqlQuery("SELECT * FROM " + TABLE_NAME)
     @RegisterBeanMapper(User.class)
-    @MaxRows(5)
+    @MaxRows(MAX_ELEMENTS)
     Collection<User> list(@MapTo Class<User> mClass);
 
     @Override
-    @SqlQuery("SELECT COUNT(*) FROM " + TABLE_NAME )
+    @SqlQuery("SELECT COUNT(*) FROM " + TABLE_NAME)
     long size();
 }
