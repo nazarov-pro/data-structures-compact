@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'war'
+    id 'findbugs'
 }
 
 group 'org.shahin.nazarov'
@@ -10,6 +11,20 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+}
+
+findbugs {
+    effort = "max"
+    reportsDir = file("$buildDir/reports/findbugs")
+    //reportLevel = "high"
+    sourceSets = [sourceSets.main]
+}
+
+findbugsMain {
+    reports {
+        html.enabled = true
+        xml.enabled = false
+    }
 }
 
 dependencies {

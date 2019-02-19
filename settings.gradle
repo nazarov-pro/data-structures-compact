@@ -18,4 +18,6 @@ include 'microservices:jersey-rest'
 findProject(':microservices:jersey-rest')?.name = 'jersey-rest'
 include 'utility:util'
 findProject(':utility:util')?.name = 'util'
+include 'db:hibernate'
+findProject(':db:hibernate')?.name = 'hibernate'
 

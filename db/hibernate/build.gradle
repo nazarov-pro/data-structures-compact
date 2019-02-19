@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+ext {
+    hibernateVersion = '5.2.6.Final'
+    h2Version = '1.4.193'
+    liquibaseVersion = '3.5.3'
+}
+group 'org.shahin.nazarov'
+version '1.0.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.hibernate:hibernate-hikaricp:${hibernateVersion}"
+    compile "com.h2database:h2:${h2Version}"
+    compile "org.liquibase:liquibase-core:${liquibaseVersion}"
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
